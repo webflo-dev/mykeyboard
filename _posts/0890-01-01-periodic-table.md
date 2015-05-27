@@ -6,6 +6,8 @@ screenshots:
 layouts:
   - name: ANSI
     file: themes/periodic-table-ansi.svg
+  - name: ISO
+    file: themes/periodic-table-iso.svg
 ---
 
 Periodic table template.
