@@ -12,6 +12,7 @@ html, body{
 	background-color: #eee;
 	text-align: left;
 	box-sizing: border-box;
+	height: 100%;
 }
 
 *, *:before, *:after {
@@ -20,7 +21,7 @@ html, body{
 
 .content{
 	h3{
-		margin: 0.3em 0;
+		padding: 0.3em 0;
 		font-style: normal;
 	}
 	.button{
@@ -33,6 +34,27 @@ html, body{
 .grid.wrap {
 	max-width: $body-width;
 	margin: 0 auto;
+}
+
+.wrap {
+	min-height: 100%;
+	margin: 0 auto (-$footer-height);
+}
+
+footer {
+	border-top: 1px solid #ccc;
+	padding-top: 1.0em;
+	text-align: center;
+	font-size: 0.75em;
+}
+
+.push, footer {
+	margin: 0;
+	height: $footer-height;
+}
+
+footer > p {
+  margin: 0;
 }
 
 a {
@@ -259,6 +281,8 @@ code {
 	text-align: center;
 	font-size: 0.8em;
 
+	margin-bottom: 2em;
+
 	a {
 		display: inline-block;
 		padding: 4px 4px;
@@ -283,14 +307,6 @@ code {
 
 }
 
-.site-footer{
-	border-top: 1px solid #ccc;
-	margin-top: 1.0em;
-	padding-top: 1.0em;
-	text-align: center;
-	font-size: 0.75em;
-}
-
 // .tags {
 // 	font-size: 0.7em;
 // 	padding: 4px 0px;
@@ -308,7 +324,7 @@ code {
 
 @media screen and (max-width: 720px) {
 	.content{
-		margin-top: 1px;
+		margin-top: tpx;
 	}
 
 	.site-title{
@@ -388,7 +404,6 @@ code {
 	}
 
 	.post {
-		margin-bottom: 0.25em;
 		h1{
 			font-size: 1.5em;
 		}
